@@ -1,4 +1,4 @@
-<!-- ![thumbnail-decodificador](https://github.com/leticia-ecastro/projetos-one-t6/assets/107160518/0ea80f49-49a7-41fe-959e-d4a6dcc47c77) -->
+![thumbnail-projeto-portfolio-responsividade](https://github.com/leticia-ecastro/one-portfolio-responsividade/assets/107160518/34259869-28f7-4c9e-acf7-4949db281d9c)
 
 <h1 align="center">:star: Projeto: Modelo de Portfólio (com responsividade)</h1>
 <p align="justify"> <h2>:rocket: Objetivo:</h2>
