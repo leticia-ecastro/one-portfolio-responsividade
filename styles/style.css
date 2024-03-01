@@ -5,8 +5,8 @@
 :root {
     --cor-primaria: #000000;
     --cor-secundaria: #F6F6F6;
-    --cor-terciaria: #22D4FD;
-    --cor-hover: #272727;
+    --cor-terciaria: #AD88C6;
+    --cor-hover: #7469B6;
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
@@ -24,15 +24,15 @@ body {
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+    padding: 2% 0% 0% 10%;
 }
 
-.cabecalho__menu {
+.cabecalho .menu {
     display: flex;
-    gap: 80px;
+    gap: 5em;
 }
 
-.cabecalho__menu__link {
+.cabecalho .link {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
@@ -40,8 +40,12 @@ body {
     text-decoration: none;
 }
 
+.cabecalho .link:hover {
+    color: var(--cor-hover);
+}
+
 .apresentacao {
-    padding: 5% 15%;
+    padding: 3% 10%;
     display: flex;
     /* display flex ---> coloca todos os elementos em linha */
     align-items: center;
@@ -49,14 +53,14 @@ body {
     gap: 82px;
 }
 
-.apresentacao__conteudo {
+.apresentacao .conteudo {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5em;
 }
 
-.apresentacao__conteudo__titulo {
+.apresentacao .titulo {
     font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
@@ -65,59 +69,65 @@ body {
     color: var(--cor-terciaria);
 }
 
-.apresentacao__conteudo__texto {
+.apresentacao .texto {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     text-align: justify;
 }
 
-.apresentacao__links {
+.apresentacao .links {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: 1.25em;
 }
 
-.apresentacao__links__subtitulo {
+.apresentacao .links .subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
 }
 
 /* classe do "a", elemento pai dos elementos img e nome da rede social */
-.apresentacao__links__navegacao {
+.apresentacao .links .navegacao {
     display: flex;
     justify-content: center;
-    gap: 16px;
-    border-radius: 8px;
+    gap: 1em;
+    border-radius: 0.5em;
     border: 2px solid var(--cor-terciaria);
     width: 50%;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 0.5em;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 15px 0;
+    padding: 0.8em 0;
     /* vertical e horizontal */
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__links__navegacao:hover {
+.apresentacao .links .navegacao:hover {
     background-color: var(--cor-hover);
 }
 
-.apresentacao__imagem {
-    width: 40%; /* em relação à tag pai (apresentação) */
+.apresentacao .imagem {
+    width: 40%;
+    /* em relação à tag pai (apresentação) */
     border-radius: 5%;
-    box-shadow: 10px 10px 5px 0px rgba(34,213,253,0.5);
+    transition: all 0.5s;
+}
+
+.apresentacao .imagem:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(15px 10px 5px rgba(189, 141, 222, 0.5));
 }
 
 .rodape {
     background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
-    padding: 24px;
+    padding: 1em;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     text-align: center;
@@ -126,18 +136,22 @@ body {
 
 @media (max-width: 1200px) {
     .cabecalho {
-        padding: 10%;
-    }
-
-    .cabecalho__menu { /* tag pai dos a */
-        justify-content: center;
-    }
-    .apresentacao {
-        flex-direction: column-reverse; /* inverte a posição dos elementos verticalmente */
         padding: 5%;
     }
 
-    .apresentacao__conteudo {
-        width: auto; /* respeita o padding do elemento pai (apresentação) */
+    .cabecalho .menu {
+        /* tag pai dos a */
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        /* inverte a posição dos elementos verticalmente */
+        padding: 5%;
+    }
+
+    .apresentacao .conteudo {
+        width: auto;
+        /* respeita o padding do elemento pai (apresentação) */
     }
 }
